@@ -5,7 +5,11 @@ const Hapi = require('hapi');
 
 const server = new Hapi.Server();
 const port = process.env.PORT || 3000;
-server.connection({port});
+server.connection({
+  port, routes: {
+    cors: true
+  }
+});
 
 server.route({
   method: 'GET',
