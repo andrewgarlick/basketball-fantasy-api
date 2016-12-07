@@ -11,7 +11,7 @@ server.route({
   method: 'GET',
   path: '/',
   handler: function (request, reply) {
-    return reply({ ok: true})
+    return reply({ok: true})
   }
 });
 
@@ -48,7 +48,7 @@ server.route({
 
     return Request.get(`https://www.fantasybasketballnerd.com/service/teams/${code}`, (error, response, body) => {
       const teams = jxon.stringToJs(body);
-      return reply(teams);
+      return reply(teams.FantasyBasketballNerd.Team);
     });
   }
 });
@@ -78,51 +78,10 @@ server.route({
 server.register([
   require('blipp')
 ], err => {
-
+  if (err) throw err;
 
   server.start((err) => {
-
-    if (err) {
-      throw err;
-    }
+    if (err) throw err;
     console.log(`Server running at: ${server.info.uri}`);
   });
 });
-
-
-// Rankings
-
-
-// request.get('https://www.fantasybasketballnerd.com/service/draft-rankings', (error, response, body) => {
-// console.log(body);
-
-//const players = jxon.stringToJs(body);
-//console.log(util.inspect(players.FantasyBasketballNerd.Player, {depth: null}));
-//});
-
-// /api/rankings =>
-
-// request.get('https://www.fantasybasketballnerd.com/service/draft-projections', (error, response, body) => {
-// console.log(body);
-
-// const players = jxon.stringToJs(body);
-// console.log(util.inspect(players.FantasyBasketballNerd.Player, {depth: null}));
-// });
-
-// /api/projections =>
-
-// /api/depth charts =>
-//  request.get('https://www.fantasybasketballnerd.com/service/depth/', (error, response, body) => {
-//  console.log(body);
-
-// const players = jxon.stringToJs(body);
-//console.log(util.inspect(players.FantasyBasketballNerd.Team, {depth: null}));
-//  });
-
-// /api/teams =>
-// request.get('https://www.fantasybasketballnerd.com/service/teams/', (error, response, body) => {
-// console.log(body);
-
-// const players = jxon.stringToJs(body);
-// console.log(util.inspect(players.FantasyBasketballNerd.Team, {depth: null}));
-// });
