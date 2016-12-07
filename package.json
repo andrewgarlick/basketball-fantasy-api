@@ -20,7 +20,8 @@
   "dependencies": {
     "blipp": "^2.3.0",
     "jxon": "^2.0.0-beta.4",
-    "request": "^2.79.0"
+    "request": "^2.79.0",
+    "babel-register": "^6.11.6"
   },
   "engines": {
     "node": "7.2.1"
@@ -30,7 +31,6 @@
     "babel-core": "^6.13.2",
     "babel-eslint": "^6.1.2",
     "babel-preset-pundits": "^1.0.6",
-    "babel-register": "^6.11.6",
     "code": "^3.0.2",
     "eslint": "^3.3.1",
     "eslint-config-pundits": "^1.0.0",
