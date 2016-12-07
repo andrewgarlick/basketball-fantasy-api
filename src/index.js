@@ -8,6 +8,14 @@ server.connection({port: 5000});
 
 server.route({
   method: 'GET',
+  path: '/',
+  handler: function (request, reply) {
+    return reply({ ok: true})
+  }
+});
+
+server.route({
+  method: 'GET',
   path: '/players',
   handler: function (request, reply) {
 
