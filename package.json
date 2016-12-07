@@ -1,0 +1,35 @@
+{
+  "name": "basketball-fantasy-api",
+  "version": "1.0.0",
+  "description": "Converts XML -> JSON",
+  "main": "index.js",
+  "scripts": {
+    "test": "_mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewgarlick/basketball-fantasy-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrewgarlick/basketball-fantasy-api/issues"
+  },
+  "homepage": "https://github.com/andrewgarlick/basketball-fantasy-api#readme",
+  "dependencies": {
+    "blipp": "^2.3.0",
+    "jxon": "^2.0.0-beta.4",
+    "request": "^2.79.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-core": "^6.13.2",
+    "babel-eslint": "^6.1.2",
+    "babel-preset-pundits": "^1.0.6",
+    "babel-register": "^6.11.6",
+    "code": "^3.0.2",
+    "eslint": "^3.3.1",
+    "eslint-config-pundits": "^1.0.0",
+    "mocha": "^3.0.2"
+  }
+}
