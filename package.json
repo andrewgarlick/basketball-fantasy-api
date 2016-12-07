@@ -4,6 +4,7 @@
   "description": "Converts XML -> JSON",
   "main": "index.js",
   "scripts": {
+    "start": "node .",
     "test": "_mocha test"
   },
   "repository": {
